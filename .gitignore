@@ -1,0 +1,51 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore build output directories
+dist/
+build/
+
+# Ignore npm debug files
+npm-debug.log*
+
+# Ignore coverage directory
+coverage/
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore local history files
+.localhistory/
+
+# Ignore Visual Studio Code specific files
+.vscode/
+
+# Ignore SASS cache files
+.sass-cache/
+
+# Ignore any compiled CSS files
+*.css.map
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore all files in a specific folder (replace 'folder-name' with your folder name)
+folder-name/
+
+# Ignore any HTML files in a specific folder (replace 'folder-name' with your folder name)
+folder-name/*.html
+
+# Ignore specific files by name
+example.html
+example.css
