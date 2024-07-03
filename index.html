@@ -12,6 +12,23 @@
 </head>
 
 <body>
+
+    <template id="all-contact-links">
+        <div class="social-links row justify-content-center mt-3">
+
+            <a href="https://www.linkedin.com/in/mohammadfeyzian/" target="_blank" class="text-white mx-2"><i
+                    class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/mohammadfeyzian" target="_blank" class="text-white mx-2"><i
+                    class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.facebook.com/mohammadfeyzian1/" target="_blank" class="text-white mx-2"><i
+                    class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://x.com/mohammadfeyzian" target="_blank" class="text-white mx-2"><i
+                    class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://leetcode.com/u/mohammadfeyzian/" target="_blank" class="text-white mx-2"><i
+                    class="fas fa-code fa-2x"></i></a>
+        </div>
+    </template>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
@@ -35,18 +52,7 @@
             <img src="assets/img/profile.jpg" alt="Mohi Feyzian" class="rounded-circle mb-3" width="200" height="200">
             <h1 class="display-4 font-weight-bold">Mohi</h1>
             <h2 style="font-size: 1.5rem;">(Mohammad Feyzian)</h2>
-            <div class="social-links mt-3">
-                <a href="https://www.linkedin.com/in/mohammadfeyzian/" target="_blank" class="text-white mx-2"><i
-                        class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/mohammadfeyzian" target="_blank" class="text-white mx-2"><i
-                        class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.facebook.com/mohammadfeyzian1/" target="_blank" class="text-white mx-2"><i
-                        class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://x.com/mohammadfeyzian" target="_blank" class="text-white mx-2"><i
-                        class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://leetcode.com/u/mohammadfeyzian/" target="_blank" class="text-white mx-2"><i
-                        class="fas fa-code fa-2x"></i></a>
-            </div>
+            <div id="all-contact-links-top"></div>
         </div>
     </header>
 
@@ -302,16 +308,21 @@
 
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <div class="social-links mb-3">
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-            </div>
-            <p>&copy; 2024 Mohi Feyzian. All rights reserved.</p>
+            <div id="all-contact-links-bottom"></div>
+            <p class="pt-3">&copy; 2024 Mohi</p>
         </div>
     </footer>
 
+    <script>
+        function insertTemplate(id) {
+            const template = document.getElementById('all-contact-links');
+            const clone = document.importNode(template.content, true);
+            document.getElementById(id).appendChild(clone);
+        }
+
+        insertTemplate('all-contact-links-top');
+        insertTemplate('all-contact-links-bottom');
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

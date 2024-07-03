@@ -24,13 +24,13 @@ header .lead {
     font-size: 1.25rem;
 }
 
-header .social-links a {
+.social-links a {
     color: #ffffff;
     margin: 0 10px;
     transition: transform 0.3s, color 0.3s;
 }
 
-header .social-links a:hover {
+.social-links a:hover {
     color: #17a2b8;
     transform: scale(1.2);
 }
@@ -172,16 +172,6 @@ footer {
     padding: 20px 0;
     text-align: center;
     position: relative;
-}
-
-footer .social-links a {
-    color: #ffffff;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #17a2b8;
 }
 
 footer p {
