@@ -83,24 +83,41 @@ ul li {
     margin-bottom: 10px;
 }
 
+/* ABOUT SECTION UPDATED STYLES */
 #about {
-    background-color: #2d2d2d;
-    padding: 50px 0;
-    text-align: center;
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    padding: 80px 20px;
+    color: #ffffff;
 }
 
 #about h2 {
-    color: #007bff; /* Primary color for the main title */
-    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #007bff; /* Bright primary color */
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-#about p.lead {
-    font-size: 1.2rem;
-    line-height: 1.6;
+.separator {
+    width: 80px;
+    height: 4px;
+    background: #ffc107; /* Decorative separator */
     margin: 0 auto;
-    max-width: 800px;
+    border-radius: 2px;
 }
 
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 900px;
+}
+
+.about-text .highlight {
+    color: #17a2b8; /* Highlight important keywords */
+    font-weight: bold;
+}
+
+/* SOCIAL LINKS */
 .social-links a {
     color: #ffffff;
     margin: 0 10px;
