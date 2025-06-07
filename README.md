@@ -3,7 +3,7 @@
 Welcome to my professional portfolio website! This is the source code for my personal website showcasing my experience as a Senior Software Engineer.
 
 ## 🌐 Live Website
-You can visit my portfolio at: **[Coming Soon - New Website]**
+You can visit my portfolio at: **[https://www.mohifayden.com/](https://www.mohifayden.com/)**
 
 ## 🚀 About
 This website showcases:
