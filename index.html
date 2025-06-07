@@ -1,415 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohi Fayden - Senior Software Engineer | Android Development Expert</title>
-    <meta name="description" content="Mohi Fayden is a Senior Software Engineer at Instacart with 10+ years of experience in Android development, Kotlin, and Java. Specializing in mobile app development, mentorship, and creating scalable solutions.">
-    <meta name="keywords" content="Mohi Fayden, Android Developer, Senior Software Engineer, Kotlin Developer, Mobile App Development, Instacart, Vancouver">
-    <meta name="author" content="Mohi Fayden">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Mohi Fayden - Senior Software Engineer">
-    <meta property="og:description" content="Senior Software Engineer specializing in Android development with expertise in Kotlin, Java, and modern mobile architectures.">
-    <meta property="og:image" content="./assets/img/profile.JPEG">
-    <meta property="og:url" content="https://mohifayden.github.io">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@mohifayden">
-    <link rel="canonical" href="https://mohifayden.github.io">
-    <base href="./">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Mohi Fayden - Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer at Instacart specializing in Android development, Kotlin, and mobile architectures">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <template id="all-contact-links">
-        <div class="social-links row justify-content-center mt-4">
-            <a href="https://www.linkedin.com/in/mohifayden/" target="_blank" class="text-white mx-2" aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://www.youtube.com/@MohiFayden" target="_blank" class="text-white mx-2" aria-label="YouTube Channel">
-                <i class="fab fa-youtube fa-2x"></i>
-            </a>
-            <a href="https://github.com/MohiFayden" target="_blank" class="text-white mx-2" aria-label="GitHub Profile">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://www.facebook.com/mohifayden/" target="_blank" class="text-white mx-2" aria-label="Facebook Profile">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://x.com/mohifayden" target="_blank" class="text-white mx-2" aria-label="Twitter Profile">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://leetcode.com/u/mohifayden/" target="_blank" class="text-white mx-2" aria-label="LeetCode Profile">
-                <i class="fas fa-code fa-2x"></i>
-            </a>
-        </div>
-    </template>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mohi Fayden",
-      "jobTitle": "Senior Software Engineer",
-      "url": "https://mohifayden.github.io",
-      "image": "./assets/img/profile.JPEG",
-      "sameAs": [
-        "https://www.linkedin.com/in/mohifayden/",
-        "https://github.com/MohiFayden",
-        "https://www.youtube.com/@MohiFayden",
-        "https://x.com/mohifayden",
-        "https://leetcode.com/u/mohifayden/"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Instacart"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Azad University (IAU)"
-      }
-    }
-    </script>
-
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#">Mohi Fayden</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-name">Mohi Fayden</span>
+                <span class="brand-title">Senior Software Engineer</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <header class="text-white text-center">
-        <div class="container">
-            <img src="./assets/img/profile.JPEG" alt="Mohi Fayden" class="rounded-circle mb-4">
-            <h1 class="display-4 font-weight-bold mb-3">Mohi Fayden</h1>
-            <h2 class="mb-4">Senior Software Engineer</h2>
-            <div id="all-contact-links-top"></div>
-            <div class="mt-4">
-                <a href="#about" class="btn btn-primary">Learn More</a>
-            </div>
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Building the future, one line of code at a time</h1>
+                    <p class="hero-subtitle">
+                        Senior Software Engineer at <span class="highlight">Instacart</span> with 10+ years of experience 
+                        crafting high-performance mobile applications that serve millions of users.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20M+</span>
+                            <span class="stat-label">Users Impacted</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Apps Delivered</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">AndroidApp.kt</div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="keyword">class</span> <span class="class-name">MobileEngineer</span> {
+    <span class="keyword">val</span> <span class="variable">expertise</span> = listOf(
+        <span class="string">"Android Development"</span>,
+        <span class="string">"Kotlin"</span>,
+        <span class="string">"Jetpack Compose"</span>,
+        <span class="string">"Clean Architecture"</span>
+    )
+    
+    <span class="keyword">fun</span> <span class="function">buildImpactfulApps</span>() {
+        <span class="comment">// Serving millions of users</span>
+        <span class="comment">// at Instacart 🚀</span>
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="about" class="py-6 text-center text-white">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="about-content fade-in">
-                        <p class="about-text">
-                            I'm a <span class="highlight">Senior Software Engineer</span> with over a decade of experience specializing in <span class="highlight">Android development</span>. I've built and led teams that delivered high-performance, scalable, and user-focused mobile applications across health tech, commerce, and consumer platforms.
-                        </p>
-                        <p class="about-text">
-                            Currently, I'm part of the engineering team at <span class="highlight">Instacart</span>, working on Payment and Commerce features to enhance the experience for millions of users. My technical toolkit includes <span class="highlight">Kotlin</span>, <span class="highlight">Java</span>, <span class="highlight">Jetpack Compose</span>, and modern Android architectures. I'm also experienced with <span class="highlight">Kotlin Multiplatform</span> and have a growing interest in cross-platform and backend development.
-                        </p>
-                        <p class="about-text">
-                            To stay fast and efficient in a high-paced environment, I actively use <span class="highlight">AI tools</span> like <span class="highlight">Cursor IDE</span>, GitHub Copilot, and ChatGPT throughout my workflow—boosting productivity in implementation, testing, debugging, and problem-solving.
-                        </p>
-                        <p class="about-text">
-                            Beyond engineering, I'm passionate about <span class="highlight">mentorship</span> and community. I actively create educational content on software engineering, helping others grow their careers while refining my own knowledge through teaching.
-                        </p>
-                        <p class="about-text">
-                            Driven by <span class="highlight">clean code</span>, <span class="highlight">thoughtful design</span>, and a mindset of <span class="highlight">continuous learning</span>, I aim to build impactful solutions that make technology more accessible and meaningful.
-                        </p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a passionate <strong>Senior Software Engineer</strong> with over a decade of experience 
+                        specializing in Android development. Currently contributing to the engineering excellence 
+                        at <strong>Instacart</strong>, where I work on Payment and Commerce features that enhance 
+                        the experience for millions of users.
+                    </p>
+                    <p>
+                        My technical journey spans from leading Android teams to architecting scalable mobile 
+                        solutions across health tech, commerce, and consumer platforms. I believe in the power 
+                        of <strong>clean code</strong>, <strong>thoughtful design</strong>, and leveraging 
+                        <strong>AI tools</strong> to accelerate development workflows.
+                    </p>
+                    <p>
+                        Beyond engineering, I'm passionate about <strong>mentorship</strong> and knowledge 
+                        sharing through educational content creation, helping fellow developers grow their careers 
+                        while continuously learning myself.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Excellence</h3>
+                        <p>Expert in Android development with modern Kotlin and Jetpack Compose</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Team Leadership</h3>
+                        <p>Led cross-functional teams delivering high-impact features</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI-Powered Development</h3>
+                        <p>Leveraging Cursor IDE, GitHub Copilot for enhanced productivity</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="resume" class="py-5">
-        <div class="container text-white">
-            <h2 class="section-title">Resume</h2>
-            <div class="text-center mb-4">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="resume-download">
                 <a href="./assets/docs/Mohi_Resume.pdf" class="btn btn-primary" download>
-                    <i class="fas fa-download mr-2"></i>Download Resume
+                    <i class="fas fa-download"></i>
+                    Download Resume
                 </a>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="experience-item fade-in">
-                        <h3 class="section-title text-warning">Skills</h3>
-                        <div class="skills-grid" role="list" aria-label="Technical skills">
-                            <div class="skill-category" role="listitem">
-                                <h4>Core Technologies</h4>
-                                <ul aria-label="Core technologies list">
-                                    <li>Kotlin</li>
-                                    <li>Java</li>
-                                    <li>Android SDK</li>
-                                    <li>Jetpack Compose</li>
-                                    <li>Kotlin Multiplatform</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category" role="listitem">
-                                <h4>Frameworks & Libraries</h4>
-                                <ul aria-label="Frameworks and libraries list">
-                                    <li>GraphQL</li>
-                                    <li>Coroutine</li>
-                                    <li>Flow</li>
-                                    <li>RxJava</li>
-                                    <li>Retrofit</li>
-                                    <li>OkHttp</li>
-                                    <li>Room DB</li>
-                                    <li>Dagger</li>
-                                    <li>Hilt</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category" role="listitem">
-                                <h4>Development Tools</h4>
-                                <ul aria-label="Development tools list">
-                                    <li>Android Studio</li>
-                                    <li>Cursor IDE</li>
-                                    <li>AI tools</li>
-                                    <li>Git</li>
-                                    <li>SQLite</li>
-                                    <li>XML</li>
-                                    <li>Gradle</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category" role="listitem">
-                                <h4>Practices & Patterns</h4>
-                                <ul aria-label="Practices and patterns list">
-                                    <li>MVVM</li>
-                                    <li>Clean Architecture</li>
-                                    <li>UI/UX Design</li>
-                                    <li>Agile</li>
-                                    <li>Concurrency</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category" role="listitem">
-                                <h4>Testing & Quality</h4>
-                                <ul aria-label="Testing and quality list">
-                                    <li>UI Automation Testing (Appiume)</li>
-                                    <li>Unit Testing</li>
-                                    <li>JUnit</li>
-                                    <li>Mockito</li>
-                                    <li>Espresso</li>
-                                    <li>Screenshot Testing</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category" role="listitem">
-                                <h4>Additional Skills</h4>
-                                <ul aria-label="Additional skills list">
-                                    <li>Data Structures</li>
-                                    <li>Algorithms</li>
-                                    <li>iOS</li>
-                                    <li>Backend</li>
-                                    <li>Swift</li>
-                                    <li>Python</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="experience-timeline">
+                <div class="experience-item current">
+                    <div class="company-logo">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-
-                    <div class="experience-item fade-in">
-                        <h3 class="section-title text-warning">Experience</h3>
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">Senior Android Engineer | Instacart</h4>
-                            <p class="text-muted">11/2024 – Present, Vancouver, Canada</p>
-                            <ul>
-                                <li>Contributing to the development of Payment and Commerce features, enhancing user experiences within the Instacart app.</li>
-                                <li>Collaborating with cross-functional teams to design, implement, and ship high-quality features.</li>
-                                <li>Utilizing Kotlin and Jetpack Compose to build scalable and maintainable solutions aligned with modern Android development practices.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">YouTube Software Engineering Educator | Freelance</h4>
-                            <p class="text-muted">10/2024 – Present · 6 mos</p>
-                            <ul>
-                                <li>Creating and publishing tutorials on Software Engineering concepts, including system design, coding practices, and career development, to support the tech community.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">Senior Software Engineer / Android | RxPx</h4>
-                            <p class="text-muted">01/2021 – 11/2024, Vancouver, Canada</p>
-                            <ul>
-                                <li>Led the Android team.</li>
-                                <li>Refactored the majority of the codebase to modern design patterns for enhanced performance.</li>
-                                <li>Integrated advanced analytics, boosting user engagement and app functionality.</li>
-                                <li>Accelerated product delivery by 30%, leading agile cross-functional teams for increased efficiency.</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">Senior Android Developer | Curatio Network Inc</h4>
-                            <p class="text-muted">12/2016 – 01/2021, Vancouver, Canada</p>
-                            <ul>
-                                <li>Increased unit test coverage to over 70% of business logic.</li>
-                                <li>Enhanced team efficiency and mentoring, streamlining development processes.</li>
-                                <li>Led the adoption of Jetpack Compose, cutting development time and improving UI flexibility.</li>
-                                <li>Aligned development goals with business objectives, contributing to strategic planning.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">Android Developer | Freelancer</h4>
-                            <p class="text-muted">11/2014 – 11/2016</p>
-                            <ul>
-                                <li>Developed and launched multiple high-performance Android applications tailored to meet diverse business needs and enhance user engagement.</li>
-                                <li>Specialized in creating robust mobile solutions featuring real-time navigation, event handling, and multimedia streaming functionalities.</li>
-                                <li>Focused on optimizing application architecture for scalability and maintainability using advanced programming techniques and comprehensive testing strategies.</li>
-                                <li>Collaborated closely with clients to identify requirements, deliver customized features, and provide ongoing support for application enhancements.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="experience-item mb-4">
-                            <h4 class="text-info">Programming and Android Development Tutor | Freelance</h4>
-                            <p class="text-muted">07/2012 – 12/2019</p>
-                            <ul>
-                                <li>Taught Java programming and Android development to individuals, focusing on practical applications and providing personalized guidance to help them achieve their goals.</li>
-                            </ul>
-                        </div>
+                    <div class="experience-details">
+                        <h3>Senior Android Engineer</h3>
+                        <h4>Instacart</h4>
+                        <p class="period">Nov 2024 - Present</p>
+                        <ul class="achievements">
+                            <li>Contributing to the development of Payment and Commerce features, enhancing user experiences within the Instacart app</li>
+                            <li>Collaborating with cross-functional teams to design, implement, and ship high-quality features</li>
+                            <li>Utilizing Kotlin and Jetpack Compose to build scalable and maintainable solutions aligned with modern Android development practices</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="experience-item fade-in">
-                        <h3 class="section-title text-warning">Education</h3>
-                        <p>Bachelor of Engineering (B.E.), Computer Software Engineering<br>Azad University (IAU), Tehran, Iran</p>
-                        <p class="text-muted">01/2008 – 07/2012</p>
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>YouTube Software Engineering Educator</h3>
+                        <h4>Freelance</h4>
+                        <p class="period">Oct 2024 - Present</p>
+                        <ul class="achievements">
+                            <li>Creating and publishing tutorials on Software Engineering concepts, including system design, coding practices, and career development</li>
+                            <li>Supporting the tech community through educational content creation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Senior Software Engineer / Android</h3>
+                        <h4>RxPx</h4>
+                        <p class="period">Jan 2021 - Nov 2024</p>
+                        <ul class="achievements">
+                            <li>Led the Android team and mentored junior developers</li>
+                            <li>Refactored the majority of the codebase to modern design patterns for enhanced performance</li>
+                            <li>Integrated advanced analytics, boosting user engagement and app functionality</li>
+                            <li>Accelerated product delivery by 30%, leading agile cross-functional teams for increased efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Senior Android Developer</h3>
+                        <h4>Curatio Network Inc</h4>
+                        <p class="period">Dec 2016 - Jan 2021</p>
+                        <ul class="achievements">
+                            <li>Increased unit test coverage to over 70% of business logic</li>
+                            <li>Enhanced team efficiency and mentoring, streamlining development processes</li>
+                            <li>Led the adoption of Jetpack Compose, cutting development time and improving UI flexibility</li>
+                            <li>Aligned development goals with business objectives, contributing to strategic planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Android Developer</h3>
+                        <h4>Freelancer</h4>
+                        <p class="period">Nov 2014 - Nov 2016</p>
+                        <ul class="achievements">
+                            <li>Developed and launched multiple high-performance Android applications tailored to meet diverse business needs</li>
+                            <li>Specialized in creating robust mobile solutions featuring real-time navigation, event handling, and multimedia streaming</li>
+                            <li>Focused on optimizing application architecture for scalability and maintainability</li>
+                            <li>Collaborated closely with clients to identify requirements and deliver customized features</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Programming and Android Development Tutor</h3>
+                        <h4>Freelance</h4>
+                        <p class="period">Jul 2012 - Dec 2019</p>
+                        <ul class="achievements">
+                            <li>Taught Java programming and Android development to individuals</li>
+                            <li>Focused on practical applications and providing personalized guidance</li>
+                            <li>Helped students achieve their career goals in software development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h3 class="education-title">Education</h3>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h4>Bachelor of Engineering (B.E.), Computer Software Engineering</h4>
+                        <p class="university">Azad University (IAU)</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-5 text-center text-white">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <div class="project featured fade-in">
-                        <h5 class="project-title">Instacart: Get Food Delivery</h5>
-                        <p class="project-description">A leading grocery delivery platform that connects users with local stores, offering same-day delivery and pickup options. Features include real-time order tracking, in-app chat with shoppers, and seamless payment processing.</p>
-                        <p class="project-link">
-                            <a href="https://play.google.com/store/apps/details?id=com.instacart.client" target="_blank" class="btn btn-primary">
-                                <i class="fab fa-google-play mr-2"></i>Google Play
-                            </a>
-                        </p>
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Core Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android SDK</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Jetpack Compose</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Kotlin Multiplatform</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project fade-in">
-                        <h5 class="project-title">Curatio: Stronger Together</h5>
-                        <p class="project-description">Supports mental health and well-being with well-being programs, expert support, and tracking tools.</p>
-                        <p class="project-link">
-                            <a href="https://play.google.com/store/apps/details?id=me.curatio.covidc_a" target="_blank" class="btn btn-primary">
-                                <i class="fab fa-google-play mr-2"></i>Google Play
-                            </a>
-                        </p>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>GraphQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Coroutines</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream"></i>
+                            <span>Flow</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>RxJava</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Retrofit</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>OkHttp</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Room DB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Dagger</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Hilt</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project fade-in">
-                        <h5 class="project-title">Connect SCD</h5>
-                        <p class="project-description">Aims to support individuals with Sickle Cell Disease (SCD) by providing resources, expert advice, and a supportive community.</p>
-                        <p class="project-link">
-                            <a href="https://play.google.com/store/apps/details?id=me.curatio.scd_a" target="_blank" class="btn btn-primary">
-                                <i class="fab fa-google-play mr-2"></i>Google Play
-                            </a>
-                        </p>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Development Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <span>Cursor IDE</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Tools</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>XML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Gradle</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project fade-in">
-                        <h5 class="project-title">CALQUENCE & Me App</h5>
-                        <p class="project-description">Designed for patients using CALQUENCE, this app offers support, resources, and tools to manage their treatment journey.</p>
-                        <p class="project-link">
-                            <a href="https://play.google.com/store/apps/details?id=me.curatio.calquence_a" target="_blank" class="btn btn-primary">
-                                <i class="fab fa-google-play mr-2"></i>Google Play
-                            </a>
-                        </p>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Practices & Patterns</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>MVVM</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-building"></i>
+                            <span>Clean Architecture</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Agile</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Concurrency</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="project full-width fade-in">
-                        <h5 class="project-title">Diverse Android Projects</h5>
-                        <p class="project-description">Experience in developing a variety of Android applications, including navigation systems, mapping solutions, real-time event tracking, video streaming platforms, and database management.</p>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Testing & Quality</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-vial"></i>
+                            <span>Unit Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>JUnit</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mask"></i>
+                            <span>Mockito</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Espresso</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Screenshot Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>UI Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Additional Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>Algorithms</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-apple"></i>
+                            <span>iOS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Backend</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-swift"></i>
+                            <span>Swift</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-5 text-center text-white">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div id="all-contact-links-bottom" class="fade-in"></div>
-                    <div class="mt-4">
-                        <a href="mailto:mohifayden@gmail.com" class="btn btn-primary mr-3">
-                            <i class="fas fa-envelope mr-2"></i>Email Me
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-item featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Instacart: Get Food Delivery</h3>
+                    </div>
+                    <p class="project-description">
+                        A leading grocery delivery platform that connects users with local stores, offering same-day delivery 
+                        and pickup options. Features include real-time order tracking, in-app chat with shoppers, and seamless 
+                        payment processing.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Payment Systems</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.instacart.client" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-google-play"></i>
+                            Google Play
                         </a>
-                        <a href="https://www.linkedin.com/in/mohifayden/" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Curatio: Stronger Together</h3>
+                    </div>
+                    <p class="project-description">
+                        Supports mental health and well-being with comprehensive well-being programs, expert support, 
+                        and tracking tools for users' mental health journey.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">Health Tech</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=me.curatio.covidc_a" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-google-play"></i>
+                            Google Play
                         </a>
                     </div>
-                    <p class="mt-4">Feel free to reach out for collaborations, questions, or just a friendly chat!</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Connect SCD</h3>
+                    </div>
+                    <p class="project-description">
+                        Aims to support individuals with Sickle Cell Disease (SCD) by providing resources, 
+                        expert advice, and a supportive community platform.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Medical App</span>
+                        <span class="tech-tag">Community</span>
+                        <span class="tech-tag">Support System</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=me.curatio.scd_a" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-google-play"></i>
+                            Google Play
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>CALQUENCE & Me App</h3>
+                    </div>
+                    <p class="project-description">
+                        Designed for patients using CALQUENCE, this app offers support, resources, 
+                        and tools to manage their treatment journey effectively.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Healthcare</span>
+                        <span class="tech-tag">Patient Care</span>
+                        <span class="tech-tag">Treatment Tracking</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=me.curatio.calquence_a" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-google-play"></i>
+                            Google Play
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-item wide">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Diverse Android Projects</h3>
+                    </div>
+                    <p class="project-description">
+                        Extensive experience in developing a variety of Android applications, including navigation systems, 
+                        mapping solutions, real-time event tracking, video streaming platforms, and database management solutions. 
+                        Each project showcases different aspects of mobile development expertise.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Navigation</span>
+                        <span class="tech-tag">Maps</span>
+                        <span class="tech-tag">Real-time</span>
+                        <span class="tech-tag">Video Streaming</span>
+                        <span class="tech-tag">Database</span>
+                        <span class="tech-tag">Multimedia</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="text-white text-center py-4">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <p class="mb-0">&copy; <time datetime="2025">2025</time> Mohi Fayden. All rights reserved.</p>
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    Interested in collaboration, have questions, or just want to chat about technology? 
+                    I'd love to hear from you!
+                </p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/mohifayden/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/MohiFayden" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.youtube.com/@MohiFayden" target="_blank" class="contact-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://x.com/mohifayden" target="_blank" class="contact-link">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>X (Twitter)</span>
+                    </a>
+                    <a href="https://leetcode.com/u/mohifayden/" target="_blank" class="contact-link">
+                        <i class="fas fa-code"></i>
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="mailto:contact@mohifayden.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <div class="contact-buttons">
+                    <a href="mailto:mohifayden@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohifayden/" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+                <p class="contact-footer">Feel free to reach out for collaborations, questions, or just a friendly chat!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mohi Fayden. Crafted with passion and code.</p>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-    <script>
-        // Clone social links template
-        document.addEventListener('DOMContentLoaded', function() {
-            const template = document.getElementById('all-contact-links');
-            const topLinks = document.getElementById('all-contact-links-top');
-            const bottomLinks = document.getElementById('all-contact-links-bottom');
-            
-            topLinks.innerHTML = template.innerHTML;
-            bottomLinks.innerHTML = template.innerHTML;
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add fade-in animation to elements when they come into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        });
-
-        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
