@@ -122,7 +122,10 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.about-content, .experience-item, .skill-item, .highlight-item');
+    const animateElements = document.querySelectorAll(
+        '.about-content, .about-text, .about-highlights, .highlight-item, ' +
+        '.experience-item, .skill-item, .project-item'
+    );
     animateElements.forEach(el => observer.observe(el));
 });
 
@@ -317,4 +320,110 @@ window.addEventListener('error', function(e) {
         console.warn('Failed to load resource:', e.target.src || e.target.href);
         showNotification('Some resources failed to load', 'warning');
     }
-}); 
+});
+
+// Code Window Typing Animation
+function startCodeTypingAnimation() {
+    const codeElement = document.getElementById('typing-code');
+    const template = document.getElementById('code-template');
+    
+    if (!codeElement || !template) return;
+    
+    // Get the full HTML content for final display
+    const fullContent = template.innerHTML;
+    
+    // Plain text version for typing
+    const plainText = `class MobileEngineer {
+    val expertise = listOf(
+        "Android Development",
+        "Kotlin",
+        "Jetpack Compose",
+        "Clean Architecture"
+    )
+    
+    val currentRole = "Senior Software Engineer"
+    
+    fun buildImpactfulApps() {
+        // Serving millions of users worldwide 🚀
+        // Modern architecture • Scalable solutions
+    }
+}`;
+    
+    let currentIndex = 0;
+    let displayText = '';
+    
+    // Clear initial content
+    codeElement.innerHTML = '<span class="cursor">|</span>';
+    
+    function applySyntaxHighlighting(text) {
+        // Create a copy to work with
+        let result = text;
+        
+        // Split into tokens and track positions
+        const tokens = [];
+        const tokenRegex = /\b(class|val|fun|MobileEngineer|buildImpactfulApps|expertise|currentRole)\b|"[^"]*"|\/\/.*$/gm;
+        let match;
+        
+        // Find all complete tokens in the text
+        while ((match = tokenRegex.exec(text)) !== null) {
+            tokens.push({
+                match: match[0],
+                index: match.index,
+                type: getTokenType(match[0])
+            });
+        }
+        
+        // Apply highlighting from end to beginning to preserve indices
+        for (let i = tokens.length - 1; i >= 0; i--) {
+            const token = tokens[i];
+            const before = result.substring(0, token.index);
+            const after = result.substring(token.index + token.match.length);
+            
+            result = before + `<span class="${token.type}">${token.match}</span>` + after;
+        }
+        
+        return result;
+    }
+    
+    function getTokenType(token) {
+        if (['class', 'val', 'fun'].includes(token)) return 'keyword';
+        if (token === 'MobileEngineer') return 'class-name';
+        if (token === 'buildImpactfulApps') return 'function';
+        if (['expertise', 'currentRole'].includes(token)) return 'variable';
+        if (token.startsWith('"')) return 'string';
+        if (token.startsWith('//')) return 'comment';
+        return '';
+    }
+    
+    function typeNextCharacter() {
+        if (currentIndex < plainText.length) {
+            const char = plainText[currentIndex];
+            displayText += char;
+            
+            // Apply syntax highlighting to the current text
+            const highlightedText = applySyntaxHighlighting(displayText);
+            
+            // Add cursor and display
+            codeElement.innerHTML = highlightedText + '<span class="cursor">|</span>';
+            
+            currentIndex++;
+            
+            // Vary typing speed for more natural feel
+            let delay = 30;
+            if (char === ' ') delay = 50;
+            if (char === '\n') delay = 150;
+            if (char === '{' || char === '}') delay = 100;
+            if (char === ';') delay = 80;
+            
+            setTimeout(typeNextCharacter, delay);
+        } else {
+            // Apply final syntax highlighting and keep cursor
+            setTimeout(() => {
+                codeElement.innerHTML = fullContent + '<span class="cursor">|</span>';
+            }, 500);
+        }
+    }
+    
+    // Start typing after window entrance animation
+    setTimeout(typeNextCharacter, 1200);
+} 

@@ -103,6 +103,7 @@
             <div class="nav-menu" id="nav-menu" role="menubar">
                 <a href="#about" class="nav-link" role="menuitem">About</a>
                 <a href="#experience" class="nav-link" role="menuitem">Experience</a>
+                <a href="#education" class="nav-link" role="menuitem">Education</a>
                 <a href="#skills" class="nav-link" role="menuitem">Skills</a>
                 <a href="#projects" class="nav-link" role="menuitem">Projects</a>
                 <a href="#contact" class="nav-link" role="menuitem">Contact</a>
@@ -162,7 +163,8 @@
                                                     <div class="window-title">MobileEngineer.kt</div>
                     </div>
                     <div class="code-content">
-                        <pre><code><span class="keyword">class</span> <span class="class-name">MobileEngineer</span> {
+                        <pre><code id="typing-code"><span class="cursor">|</span></code></pre>
+                        <div id="code-template" style="display: none;"><span class="keyword">class</span> <span class="class-name">MobileEngineer</span> {
     <span class="keyword">val</span> <span class="variable">expertise</span> = listOf(
         <span class="string">"Android Development"</span>,
         <span class="string">"Kotlin"</span>,
@@ -176,7 +178,7 @@
         <span class="comment">// Serving millions of users worldwide 🚀</span>
         <span class="comment">// Modern architecture • Scalable solutions</span>
     }
-}</code></pre>
+}</div>
                     </div>
                     </div>
                 </div>
@@ -338,15 +340,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="education-section">
-                <h3 class="education-title">Education</h3>
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
                 <div class="education-item">
-                    <div class="education-icon">
+                    <div class="company-logo">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="education-details">
-                        <h4>Bachelor of Engineering (B.E.), Computer Software Engineering</h4>
+                        <h3>Bachelor of Engineering (B.E.)</h3>
+                        <h4>Computer Software Engineering</h4>
                         <p class="university">Azad University (IAU)</p>
                     </div>
                 </div>
@@ -749,5 +757,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Add loaded class to code window after entrance animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const codeWindow = document.querySelector('.code-window');
+            if (codeWindow) {
+                setTimeout(() => {
+                    codeWindow.classList.add('loaded');
+                }, 1500); // After entrance animation completes
+            }
+            
+            // Start typing animation
+            startCodeTypingAnimation();
+        });
+    </script>
 </body>
 </html>
