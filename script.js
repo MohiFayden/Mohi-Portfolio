@@ -7,25 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle mobile menu
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
-        
-        // Animate hamburger icon
-        const bars = navToggle.querySelectorAll('.bar');
-        bars[0].style.transform = navMenu.classList.contains('active') 
-            ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
-        bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-        bars[2].style.transform = navMenu.classList.contains('active') 
-            ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
+        // CSS handles the hamburger animation now
     });
 
     // Close menu when clicking on links
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            // Reset hamburger icon
-            const bars = navToggle.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
+            // CSS handles the hamburger animation reset
         });
     });
 
@@ -35,11 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!isClickInsideNav && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
-            // Reset hamburger icon
-            const bars = navToggle.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
+            // CSS handles the hamburger animation reset
         }
     });
 });
@@ -293,11 +278,7 @@ document.addEventListener('keydown', function(e) {
         
         if (navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
-            // Reset hamburger icon
-            const bars = navToggle.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
+            // CSS handles the hamburger animation reset
         }
     }
 });
