@@ -152,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Small delay before starting animation
     setTimeout(() => {
-        typeWriter(heroTitle, originalText, 40);
-    }, 100);
+        typeWriter(heroTitle, originalText, 50);
+    }, 400);
 });
 
 // Skill Items Hover Effect
