@@ -412,30 +412,109 @@ function startCodeTypingAnimation() {
 document.addEventListener('DOMContentLoaded', function() {
     const navPhoto = document.getElementById('nav-photo');
     const modal = document.getElementById('photo-modal');
+    const modalPhoto = modal?.querySelector('.modal-photo');
 
-    if (navPhoto && modal) {
+    if (navPhoto && modal && modalPhoto) {
         // Show modal when navbar photo is clicked
         navPhoto.addEventListener('click', function(e) {
             e.stopPropagation(); // Prevent click from bubbling up to document
+            
+            // Add a small delay to make the animation feel more responsive
+            navPhoto.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                navPhoto.style.transform = '';
+            }, 150);
+            
             modal.classList.add('visible');
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
         });
 
         // Hide modal when the overlay is clicked
-        modal.addEventListener('click', function() {
-            modal.classList.remove('visible');
+        modal.addEventListener('click', function(e) {
+            // Only close if clicking the overlay, not the photo
+            if (e.target === modal) {
+                closePhotoModal();
+            }
         });
 
         // Prevent modal from closing when the photo inside is clicked
-        modal.querySelector('.modal-photo').addEventListener('click', function(e) {
+        modalPhoto.addEventListener('click', function(e) {
             e.stopPropagation();
+            
+            // Add a subtle bounce effect when clicking the photo
+            modalPhoto.style.transform = 'scale(0.98) rotate(0deg)';
+            setTimeout(() => {
+                modalPhoto.style.transform = 'scale(1) rotate(0deg)';
+            }, 100);
         });
+        
+        // Add double-click to close functionality
+        modalPhoto.addEventListener('dblclick', function(e) {
+            e.stopPropagation();
+            closePhotoModal();
+        });
+    }
+
+    // Function to close the modal with proper cleanup
+    function closePhotoModal() {
+        const modal = document.getElementById('photo-modal');
+        if (modal && modal.classList.contains('visible')) {
+            modal.classList.remove('visible');
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
     }
 
     // Hide modal with Escape key
     document.addEventListener('keydown', function(e) {
-        const modal = document.getElementById('photo-modal');
-        if (e.key === 'Escape' && modal && modal.classList.contains('visible')) {
-            modal.classList.remove('visible');
+        if (e.key === 'Escape') {
+            closePhotoModal();
         }
     });
+    
+    // Add touch/swipe support for mobile
+    if (modalPhoto) {
+        let startY = 0;
+        let currentY = 0;
+        let isDragging = false;
+        
+        modalPhoto.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+            isDragging = true;
+        }, { passive: true });
+        
+        modalPhoto.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            
+            currentY = e.touches[0].clientY;
+            const diff = currentY - startY;
+            
+            // Add a subtle transform based on swipe
+            if (Math.abs(diff) > 10) {
+                const scale = Math.max(0.8, 1 - Math.abs(diff) / 500);
+                const rotation = diff / 10;
+                modalPhoto.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
+                modalPhoto.style.opacity = Math.max(0.5, 1 - Math.abs(diff) / 300);
+            }
+        }, { passive: true });
+        
+        modalPhoto.addEventListener('touchend', function(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const diff = currentY - startY;
+            
+            // If swiped far enough, close the modal
+            if (Math.abs(diff) > 100) {
+                closePhotoModal();
+            } else {
+                // Reset the transform
+                modalPhoto.style.transform = 'scale(1) rotate(0deg)';
+                modalPhoto.style.opacity = '1';
+            }
+        }, { passive: true });
+    }
 }); 
