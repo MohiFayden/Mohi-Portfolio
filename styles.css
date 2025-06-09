@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -88,6 +88,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-profile-photo {
+    width: max(55px, calc(100vh * 0.07));
+    height: max(55px, calc(100vh * 0.07));
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    transition: all 0.3s ease;
+    margin: 2px 8px;
+}
+
+.nav-profile-photo:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+.brand-text {
     display: flex;
     flex-direction: column;
 }
@@ -362,6 +385,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
 }
 
+
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -374,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 11.5rem; /* Fixed height to prevent content jumping */
     display: flex;
     align-items: flex-start;
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInLeft 1s ease-out 0.3s forwards;
     opacity: 0;
     transform: translateX(-50px);
 }
@@ -1300,6 +1325,8 @@ h1, h2, h3, h4, h5, h6 {
     .hero-container {
         padding-top: 1rem;
     }
+
+
     
     /* Tablet: 2 columns for three-column row */
     .projects-row.three-columns {
@@ -1310,7 +1337,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     /* Navigation adjustments */
     .navbar {
-        padding: 0.75rem 0;
+        padding: 0.4rem 0;
     }
 
     /* Code window mobile adjustments */
@@ -1367,6 +1394,23 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-profile-photo {
+        width: max(45px, calc(100vh * 0.06));
+        height: max(45px, calc(100vh * 0.06));
+        max-width: 60px;
+        max-height: 60px;
+        border-width: 2px;
+        margin: 1px 6px;
+    }
+
+    .brand-name {
+        font-size: 1.25rem;
+    }
+
+    .brand-title {
+        font-size: 0.75rem;
     }
 
     /* Hero section mobile fixes */
@@ -1677,6 +1721,8 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0.6rem 0.75rem;
         font-size: 0.8rem;
     }
+
+
 
     .code-content {
         font-size: 0.7rem;
