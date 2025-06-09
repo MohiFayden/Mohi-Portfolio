@@ -7,9 +7,9 @@ You can visit my portfolio at: **[https://www.mohifayden.com/](https://www.mohif
 
 ## 🚀 About
 This website showcases:
-- **Professional Experience** - 10+ years in software engineering
-- **Technical Skills** - Android development, Kotlin, Java, and modern frameworks
-- **Featured Projects** - Including work at Instacart, health tech applications, and more
+- **Professional Experience** - 10+ years in software engineering and architecture
+- **Technical Skills** - Software architecture, system design, team leadership, and scalable solutions
+- **Featured Projects** - Including health tech applications, commerce platforms, and enterprise solutions
 - **Contact Information** - Multiple ways to connect and collaborate
 
 ## 🛠 Built With
@@ -19,15 +19,15 @@ This website showcases:
 - **Font Awesome** - Professional icons
 - **Google Fonts** - Inter and JetBrains Mono typography
 
-## 📱 Features
+## ✨ Features
 - **Responsive Design** - Works on all devices
 - **Dark Theme** - Professional appearance
-- **Typing Animation** - Dynamic hero section
+- **Typing Animation** - Dynamic code showcase
 - **Smooth Scrolling** - Enhanced user experience
 - **Interactive Elements** - Hover effects and animations
 
 ## 👨‍💻 About Me
-I'm a Senior Software Engineer at Instacart with over a decade of experience specializing in Android development. I'm passionate about building high-performance mobile applications that serve millions of users.
+I'm a Senior Software Engineer with over a decade of experience specializing in scalable software solutions and system architecture. I'm passionate about building high-performance applications and leading engineering teams to deliver solutions that serve millions of users.
 
 ## 📄 Resume
 Download my latest resume: [Mohi_Resume.pdf](./assets/docs/Mohi_Resume.pdf)
