@@ -406,4 +406,36 @@ function startCodeTypingAnimation() {
     
     // Start typing after window entrance animation
     setTimeout(typeNextCharacter, 1200);
-} 
+}
+
+// Photo Modal Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const navPhoto = document.getElementById('nav-photo');
+    const modal = document.getElementById('photo-modal');
+
+    if (navPhoto && modal) {
+        // Show modal when navbar photo is clicked
+        navPhoto.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent click from bubbling up to document
+            modal.classList.add('visible');
+        });
+
+        // Hide modal when the overlay is clicked
+        modal.addEventListener('click', function() {
+            modal.classList.remove('visible');
+        });
+
+        // Prevent modal from closing when the photo inside is clicked
+        modal.querySelector('.modal-photo').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    // Hide modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        const modal = document.getElementById('photo-modal');
+        if (e.key === 'Escape' && modal && modal.classList.contains('visible')) {
+            modal.classList.remove('visible');
+        }
+    });
+}); 

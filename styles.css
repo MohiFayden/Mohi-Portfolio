@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 3px solid var(--primary);
     transition: all 0.3s ease;
     margin: 2px 8px;
+    cursor: pointer;
 }
 
 .nav-profile-photo:hover {
@@ -384,8 +385,6 @@ h1, h2, h3, h4, h5, h6 {
 .hero-badge i {
     font-size: 0.75rem;
 }
-
-
 
 .hero-title {
     font-size: 3.5rem;
@@ -1314,6 +1313,47 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+/* Photo Modal */
+.photo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photo-modal.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-photo {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-modal.visible .modal-photo {
+    transform: scale(1);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) and (min-width: 769px) {
     /* Medium screens: tablets and small laptops */
@@ -1326,8 +1366,6 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: 1rem;
     }
 
-
-    
     /* Tablet: 2 columns for three-column row */
     .projects-row.three-columns {
         grid-template-columns: repeat(2, 1fr);
@@ -1721,8 +1759,6 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0.6rem 0.75rem;
         font-size: 0.8rem;
     }
-
-
 
     .code-content {
         font-size: 0.7rem;
