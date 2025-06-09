@@ -314,19 +314,18 @@ function startCodeTypingAnimation() {
     const fullContent = template.innerHTML;
     
     // Plain text version for typing
-    const plainText = `class SoftwareEngineer {
+    const plainText = `class MobileArchitect {
     val expertise = listOf(
-        "Software Architecture",
-        "System Design",
-        "Team Leadership",
-        "Scalable Solutions"
+        "Android Architecture",
+        "Kotlin & Jetpack Compose",
+        "Scalable Systems",
+        "Clean Architecture"
     )
     
     val currentRole = "Senior Software Engineer"
     
-    fun buildImpactfulSolutions() {
-        // Serving millions of users worldwide 🚀
-        // Modern architecture • Scalable systems
+    fun buildModernApps() {
+        // High-performance mobile • Scalable backends
     }
 }`;
     
