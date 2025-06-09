@@ -229,6 +229,7 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 100px; /* Base padding for navbar clearance */
 }
 
 .hero::before {
@@ -1289,7 +1290,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Medium screens: tablets and small laptops */
+    .hero {
+        padding-top: 120px; /* Increased padding for medium screens */
+        align-items: flex-start;
+    }
+    
+    .hero-container {
+        padding-top: 1rem;
+    }
+    
     /* Tablet: 2 columns for three-column row */
     .projects-row.three-columns {
         grid-template-columns: repeat(2, 1fr);
