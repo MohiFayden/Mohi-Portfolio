@@ -402,9 +402,12 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 11.5rem; /* Fixed height to prevent content jumping */
     display: flex;
     align-items: flex-start;
-    animation: slideInLeft 1s ease-out 0.3s forwards;
     opacity: 0;
     transform: translateX(-50px);
+}
+
+.hero-title.animate {
+    animation: slideInLeft 1s ease-out 0.3s forwards;
 }
 
 .highlight-gradient {
@@ -436,9 +439,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.6;
-    animation: slideInLeft 1s ease-out 0.3s forwards;
     opacity: 0;
     transform: translateX(-30px);
+}
+
+.hero-subtitle.animate {
+    animation: slideInLeft 1s ease-out 0.3s forwards;
 }
 
 .highlight {
@@ -471,9 +477,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
-    animation: slideInUp 1s ease-out 0.6s forwards;
     opacity: 0;
     transform: translateY(30px);
+}
+
+.hero-stats.animate {
+    animation: slideInUp 1s ease-out 0.6s forwards;
 }
 
 .stat {
@@ -513,9 +522,12 @@ h1, h2, h3, h4, h5, h6 {
 .hero-actions {
     display: flex;
     gap: 1rem;
-    animation: slideInUp 1s ease-out 0.9s forwards;
     opacity: 0;
     transform: translateY(30px);
+}
+
+.hero-actions.animate {
+    animation: slideInUp 1s ease-out 0.9s forwards;
 }
 
 .btn {
@@ -586,10 +598,13 @@ h1, h2, h3, h4, h5, h6 {
         0 25px 50px rgba(0, 0, 0, 0.4),
         0 0 0 1px rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border);
-    animation: codeWindowEntrance 1.5s ease-out forwards;
     opacity: 0;
     width: 100%;
     max-width: 500px;
+}
+
+.code-window.animate {
+    animation: codeWindowEntrance 1.5s ease-out forwards;
 }
 
 .code-window.loaded {

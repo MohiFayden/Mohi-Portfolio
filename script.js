@@ -293,6 +293,15 @@ window.addEventListener('load', function() {
         loader.style.opacity = '0';
         setTimeout(() => loader.remove(), 300);
     }
+    
+    // Trigger hero animations after full load
+    setTimeout(() => {
+        document.querySelector('.hero-title')?.classList.add('animate');
+        document.querySelector('.hero-subtitle')?.classList.add('animate');
+        document.querySelector('.hero-stats')?.classList.add('animate');
+        document.querySelector('.hero-actions')?.classList.add('animate');
+        document.querySelector('.code-window')?.classList.add('animate');
+    }, 100); // Small delay to ensure rendering is complete
 });
 
 // Error handling for external resources
